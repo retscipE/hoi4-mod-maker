@@ -27,7 +27,7 @@ export class Mod {
 
     public async convertToDescriptor(): Promise<void> {
         const edittedTags = [];
-        this.#tags.forEach(tag => edittedTags.push(`    "${tag}"`))
+        this.#tags.forEach(tag => edittedTags.push(`"${tag}"`))
         const tagsList = edittedTags.join(`\n`)
         
         try {
@@ -36,7 +36,7 @@ export class Mod {
             mkdirSync(path.join(`./${this.#name}/`))
             if (this.#dependencies !== undefined) {
                 const edittedDependencies = [];
-                this.#dependencies.forEach(dependency => edittedDependencies.push(`    "${dependency}"`))
+                this.#dependencies.forEach(dependency => edittedDependencies.push(`"${dependency}"`))
                 const dependencyList = edittedDependencies.join(`\n`)
 
                 writeFileSync(
