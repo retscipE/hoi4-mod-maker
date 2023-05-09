@@ -1,0 +1,25 @@
+{
+  "name": "hoi4-mod-maker",
+  "version": "1.0.0",
+  "description": "NPM Package that lets the user create a HOI4 Mod within Javascript/Typescript and converting to use in HOI4",
+  "main": "dist/index.js",
+  "scripts": {
+    "build:publish": "npm run build && npm publish",
+    "build": "npx tsc",
+    "test": "npx ts-node test/index.ts"
+  },
+  "keywords": [
+    "hoi4",
+    "mod",
+    "creator",
+    "hoi4-mod",
+    "hoi4-mod-creator"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.1.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  }
+}
